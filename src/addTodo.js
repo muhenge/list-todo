@@ -17,7 +17,7 @@ const todoInput = (e) => {
     const todo = new Todos(index, e.target.value, false);
     todos.push(todo);
     localStorage.setItem('todos', JSON.stringify(todos));
-    addTasks(JSON.parse(localStorage.getItem('todos')));
+    localStorage.getItem('todos') ? addTasks(JSON.parse(localStorage.getItem('todos'))) : null;
   }
  
   
