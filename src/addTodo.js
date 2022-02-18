@@ -19,6 +19,8 @@ const todoInput = (e) => {
     localStorage.setItem('todos', JSON.stringify(todos));
     addTasks(JSON.parse(localStorage.getItem('todos')));
   }
+ 
+  
 }
 
 export default todoInput;
